@@ -6,7 +6,7 @@ class munin::host::cgi {
     }
 
     file{'/etc/logrotate.d/munin':
-        source => [ "puppet:///modules/site-munin/config/host/${fqdn}/logrotate",
+        source => [ "puppet:///modules/site-munin/config/host/${hostname}/logrotate",
                     "puppet:///modules/site-munin/config/host/logrotate.$operatingsystem",
                     "puppet:///modules/site-munin/config/host/logrotate",
                     "puppet:///modules/munin/config/host/logrotate.$operatingsystem",

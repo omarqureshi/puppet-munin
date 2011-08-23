@@ -18,8 +18,8 @@ define munin::register (
 
     $munin_host_real = $host ? {
         'absent' => $munin_host ? {
-                        '' => $fqdn,
-                        'fqdn' => $fqdn,
+                        '' => $hostname,
+                        'hostname' => $hostname,
                         default => $munin_host
                     },
         default => $host

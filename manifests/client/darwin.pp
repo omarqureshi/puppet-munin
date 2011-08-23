@@ -17,5 +17,5 @@ class munin::client::darwin {
     exec{"/sbin/SystemStarter start SNMP":
         noop => false,
     }
-    munin::register_snmp { $fqdn: }
+    munin::register_snmp { $hostname: }
 }
